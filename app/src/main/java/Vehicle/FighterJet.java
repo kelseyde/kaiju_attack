@@ -26,7 +26,7 @@ public class FighterJet extends Vehicle implements CanAttack, Attackable{
                 return "That Kaiju will rue the day he messed with this pilot.";
             case 'C' :
                 target.receiveAttack(getAttackValue()/3);
-                return "A decent effort, clipped the Kaiju's side.";
+                return "A decent effort; clipped the Kaiju's side.";
             case 'D' :
                 return "Miss!";
         }
