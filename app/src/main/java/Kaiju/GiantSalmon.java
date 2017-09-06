@@ -11,9 +11,12 @@ public class GiantSalmon extends Kaiju implements CanAttack, Attackable{
 
     public String roar() { return "deadly silence..."; }
 
+    public String move() {
+        return "The graceful GiantSalmon glides through the water like a knife through soft butter."; }
+
     public String attack(Attackable target) {
         target.receiveAttack(attackValue);
-        return "Giant Salmon leaps from the water and reigns down terror upon the meek and feeble "
+        return "GiantSalmon leaps from the water and reigns down terror upon the meek and feeble "
                 +target.getClass()+".";
     }
 

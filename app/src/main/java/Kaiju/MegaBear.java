@@ -11,6 +11,8 @@ public class MegaBear extends Kaiju implements CanAttack, Attackable {
 
     public String roar() { return "RAWRRR!"; }
 
+    public String move() { return "The MegaBear lumbers across the land, trampling all that dare stand in its wake."; }
+
     public String attack(Attackable target) {
         target.receiveAttack(getAttackValue());
         return "MegaBear awakes from his slumber to inflict great pain upon the puny and worthless "
@@ -21,5 +23,6 @@ public class MegaBear extends Kaiju implements CanAttack, Attackable {
         if (damage > healthValue) healthValue = 0;
         else healthValue -= damage;
     }
+
 
 }

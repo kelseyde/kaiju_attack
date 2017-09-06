@@ -42,5 +42,7 @@ public abstract class Kaiju {
 
   public String roar() { return "Roar!"; }
 
+  public String move() { return "The Kaiju moves."; }
+
 
 }

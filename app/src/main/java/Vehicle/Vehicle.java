@@ -12,6 +12,8 @@ public abstract class Vehicle {
         this.attackValue = attackValue;
     }
 
+    //getters and setters
+
     public int getUnitNumber() {
         return unitNumber;
     }
