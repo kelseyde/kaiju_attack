@@ -12,7 +12,7 @@ public class HouseTest {
     @Before
     public void before() {
         house = new House(10);
-        giantSalmon = new GiantSalmon("Sam", 200, 40);
+        giantSalmon = new GiantSalmon("Sam", 200, 40, 10);
     }
 
     @Test

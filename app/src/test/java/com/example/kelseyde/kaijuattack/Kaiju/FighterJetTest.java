@@ -14,7 +14,7 @@ public class FighterJetTest {
     @Before
     public void before() {
         fighterJet = new FighterJet(1, 20, 10);
-        giantSalmon = new GiantSalmon("Big Fish", 100, 40);
+        giantSalmon = new GiantSalmon("Big Fish", 100, 40, 10);
     }
 
     @Test

@@ -11,7 +11,7 @@ public class GiantSalmonTest {
 
     @Before
     public void before() {
-        giantSalmon = new GiantSalmon("Bill", 200, 40);
+        giantSalmon = new GiantSalmon("Bill", 200, 40, 10);
         tank = new Tank(1, 50, 15);
     }
 
@@ -39,6 +39,13 @@ public class GiantSalmonTest {
     public void canAttack() {
         giantSalmon.attack(tank);
         assertEquals(10, tank.getHealthValue());
+    }
+
+    @Test
+    public void testCanReceiveAttackPiercesArmous() {
+        giantSalmon.receiveAttack(50);
+        assertEquals(0, giantSalmon.getArmourValue());
+        assertEquals(160, giantSalmon.getHealthValue());
     }
 
 

@@ -12,7 +12,7 @@ public class OfficeBlockTest {
     @Before
     public void before() {
         officeBlock = new OfficeBlock(45);
-        giantSalmon = new GiantSalmon("Sam", 200, 40);
+        giantSalmon = new GiantSalmon("Sam", 200, 40, 10);
     }
 
     @Test

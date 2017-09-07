@@ -5,9 +5,24 @@ import Behaviours.Attackable;
 
 public class GiantSalmon extends Kaiju implements CanAttack, Attackable{
 
-    public GiantSalmon(String name, int healthValue, int attackValue) {
+    private int armourValue;
+
+    public GiantSalmon(String name, int healthValue, int attackValue, int armourValue) {
         super(name, healthValue, attackValue);
+        this.armourValue = armourValue;
     }
+
+    //getters and setters
+
+    public int getArmourValue() {
+        return armourValue;
+    }
+
+    public void setArmourValue(int armourValue) {
+        this.armourValue = armourValue;
+    }
+
+    //methods
 
     public String roar() { return "deadly silence..."; }
 
@@ -21,9 +36,18 @@ public class GiantSalmon extends Kaiju implements CanAttack, Attackable{
     }
 
     public void receiveAttack(int damage) {
-        if (damage > healthValue) healthValue = 0;
-        else healthValue -= damage;
+        if (damage > armourValue) {
+            armourValue = 0;
+            if (damage > healthValue) healthValue = 0;
+            else healthValue -= (damage - armourValue);
+        }
+        else armourValue -= damage;
+        }
+
+
     }
 
 
-}
+
+
+
